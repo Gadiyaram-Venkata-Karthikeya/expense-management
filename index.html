@@ -1,0 +1,145 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Expense Management System</title> 
+    <link 
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.5.0/css/all.min.css" /> 
+    <link rel="stylesheet" href="App.css"> 
+</head> 
+<body> 
+    <div class="web-container"> 
+        <div id="mainPage"><!-- MAIN PAGE --> 
+            <header class="navbar"> 
+                <div class="nav-left"> 
+                    <div class="logo"> 
+                        <span class="logo-icon"><i class="fa-solid fa-piggy-bank"></i></span>                         <span class="logo-text">Expense Tracker</span> 
+                    </div> 
+                    <nav class="nav-links"> 
+                        <a href="#"><span class="nav-item active">Summary</span></a> 
+                        <a href="#"><span class="nav-item">Transactions</span></a> 
+                        <a href="#"><span class="nav-item">Quick Add</span></a> 
+                    </nav> 
+                </div> 
+                <div class="nav-right"> 
+                    <div class="user-avatar"> 
+                        <i class="fa-solid fa-user"></i> 
+                    </div> 
+<div class="profile-dropdown"> 
+    <ul> 
+        <li><i class="fa-solid fa-user"></i> View Profile</li> 
+        <li><i class="fa-solid fa-gear"></i> Account Settings</li> 
+        <li><i class="fa-solid fa-bell"></i> Notifications</li> 
+                            <li><i class="fa-solid fa-circle-half-stroke"></i> Theme</li> 
+                            <li><i class="fa-solid fa-question-circle"></i> Help & Support</li> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </header> 
+            <main class="dashboard"> 
+                <div class="date-dropdown"> 
+                    <i class="fa-regular fa-calendar"></i> 
+                    <span>Oct 1 - Oct 31</span> 
+                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i> 
+                    <input type="date" id="calendarInput" style="opacity:0; position:absolute; pointerevents:none;" /> 
+                </div> 
+                <div class="center-hub"> 
+                    <div class="budget-ring-outer"> 
+                        <div class="budget-ring-inner"> 
+                            <span class="budget-amount">₹45,670</span> 
+                            <span class="budget-label">(Budget Left)</span> 
+                        </div> 
+                    </div> 
+                    <div class="category-node cat-top"> 
+                        <div class="cat-icon"><i class="fa-solid fa-shirt"></i> 
+                        </div> 
+                        <span class="cat-label">Clothes</span> 
+                    </div> 
+<div class="category-node cat-mid-left"> 
+    <div class="cat-icon"><i class="fa-solid fa-carrot"></i></div> 
+    <span class="cat-label">Food</span> 
+</div> 
+<div class="category-node cat-mid-right"> 
+                        <div class="cat-icon"><i class="fa-solid fa-bus"></i></div> 
+                        <span class="cat-label">Transport</span> 
+                    </div> 
+                    <div class="category-node cat-bot-left"> 
+                        <div class="cat-icon"><i class="fa-solid fa-house"></i></div> 
+                        <span class="cat-label">Rent</span> 
+                    </div> 
+                    <div class="category-node cat-bot-right"> 
+                        <div class="cat-icon"><i class="fa-solid fa-box"></i></div> 
+                        <span class="cat-label">Supplies</span> 
+                    </div> 
+                    <div class="category-node cat-center-bot"> 
+                        <div class="cat-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div> 
+                    </div> 
+                </div> 
+                <div class="action-container" onclick="openaddnew()"> 
+                    <button class="add-transaction-btn"> 
+                        Add Transaction <i class="fa-solid fa-plus"></i> 
+                    </button> 
+                </div> 
+                <footer class="summary-footer"> 
+                    <div class="bill-card"> 
+                        <div class="card-column"> 
+                            <span class="card-title">Next Bill Due:</span> 
+                            <span class="card-value">₹12,500</span> 
+                        </div> 
+    <div class="card-column"> 
+        <span class="card-title">First seamer:</span> 
+        <span class="card-value">₹12,500</span> 
+    </div> 
+</div> 
+                </footer> 
+            </main> 
+        </div> 
+        <div id="transactionPage" style="display: none;"><!-- TRANSACTION PAGE --> 
+            <div class="card"> 
+                <div class="card-header"> 
+                    <h1>Add Transaction</h1> 
+                    <button class="close-btn" onclick="closebtn()"> 
+                        <i class="fas fa-times"></i> 
+                    </button> 
+                </div> 
+                <div class="transaction-fields"> 
+                    <div class="field-row"> 
+                        <span class="field-label">Date</span> 
+                        <div class="field-value"> 
+                            <span class="value-text">24 Apr 2024</span> 
+                            <i class="fas fa-chevron-down icon"></i> 
+                        </div> 
+                    </div> 
+                    <div class="field-row"> 
+                        <span class="field-label">Category</span> 
+                        <div class="field-value"> 
+                            <span class="value-text">Dining</span> 
+                            <i class="fas fa-chevron-down icon"></i> 
+                        </div> 
+                    </div> 
+<div class="field-row"> 
+    <span class="field-label">Amount</span> 
+    <div class="field-value amount-value"> 
+        <span class="currency-symbol">$</span>0 
+                        </div> 
+                    </div> 
+                    <div class="field-row description-row"> 
+                        <span class="field-label">Description</span> 
+                        <div class="field-value"> 
+                            <input type="text" placeholder="Enter a description" /> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="action-buttons"> 
+                    <button class="btn btn-cancel">Cancel</button> 
+                    <button class="btn btn-add">Add Transaction</button> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <script src="App.js"></script> 
+</body> 
+</html> 
+ 
