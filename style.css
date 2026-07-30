@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -527,3 +528,264 @@ body {
     opacity: 0;
     pointer-events: none;
 }
+=======
+* { 
+  margin: 0;   padding: 0;   box-sizing: border-box; 
+} 
+ 
+body {   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+  display: flex;   justify-content: center;   align-items: center;   min-height: 100vh;   padding: 20px; 
+} 
+ 
+.container {   max-width: 550px;   width: 100%;   background: rgba(255, 255, 255, 0.95);   backdrop-filter: blur(10px);   border-radius: 25px;   padding: 30px;   box-shadow: 0 20px 60px rgba(0,0,0,0.3); 
+} 
+ 
+/* Header */ .header {   margin-bottom: 25px; 
+  text-align: center; 
+}
+ 
+.header h1 {   font-size: 28px;   color: #2c3e50;   display: flex;   align-items: center;   justify-content: center;   gap: 12px; 
+} 
+ 
+.header h1 i {   background: linear-gradient(135deg, #667eea, #764ba2); 
+  -webkit-background-clip: text;   -webkit-text-fill-color: transparent;   font-size: 30px; 
+} 
+ 
+.subtitle {   color: #7f8c8d;   font-size: 14px;   margin-top: 5px; 
+} 
+ 
+.subtitle i { 
+  color: #667eea;   margin-right: 5px; 
+} 
+ 
+/* Pie Chart Section */ 
+.chart-section { background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 20px;  padding: 25px;   margin-bottom: 20px; 
+  display: flex;   align-items: center;   gap: 30px;   flex-wrap: wrap;   justify-content: center;   border: 2px solid rgba(102, 126, 234, 0.1); 
+} 
+ 
+.pie-chart {   width: 140px;   height: 140px;   border-radius: 50%;   background: #ecf0f1;   position: relative;   transition: 0.5s;   flex-shrink: 0; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+} 
+ 
+.pie-segment {   width: 100%;   height: 100%;   border-radius: 50%;   clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 50% 0%); 
+  transition: 0.5s;   background: #2ecc71; 
+}
+.pie-center {   position: absolute;   top: 50%;   left: 50%;   transform: translate(-50%, -50%);   text-align: center;   background: white;   width: 80px;   height: 80px;   border-radius: 50%; 
+  display: flex;   flex-direction: column;   justify-content: center;   align-items: center;   box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
+} 
+ 
+.pie-center i {   font-size: 16px;   color: #667eea;   margin-bottom: 2px; 
+} 
+ 
+.pie-center span {   font-size: 22px;   font-weight: bold;   color: #2c3e50; 
+} 
+ 
+.pie-center small { font-size: 10px; color: #888;  text-transform: uppercase;   letter-spacing: 1px; 
+} 
+ 
+.chart-info {   display: flex;   flex-direction: column;   gap: 8px; 
+} 
+ 
+.legend { 
+  display: flex;   align-items: center;   gap: 10px;   font-size: 13px;   color: #555; 
+} 
+ 
+.legend-color {   width: 14px;   height: 14px;   border-radius: 50%;   display: inline-block;   flex-shrink: 0; 
+} 
+ 
+.legend i {   width: 16px; 
+}
+.legend-detail {   margin-top: 5px;   padding: 8px 15px;   background: white;   border-radius: 20px;   font-size: 12px;   color: #555;   display: flex;   align-items: center;   gap: 8px;   border: 1px solid #e0e0e0; 
+} 
+ 
+.legend-detail i {   color: #667eea; 
+} 
+ 
+/* Balance Section */ .balance-section {   background: white;   border-radius: 18px;   padding: 20px;   margin-bottom: 20px;   box-shadow: 0 2px 10px rgba(0,0,0,0.05);   border: 1px solid #eef2f7; 
+} 
+ 
+.balance-display {   display: flex; 
+  justify-content: space-between; align-items: center; margin-bottom: 15px; 
+}
+ 
+.balance-display span:first-child {   font-size: 16px;   color: #555;   font-weight: 500; 
+} 
+ 
+.balance-display span:first-child i {   color: #667eea;   margin-right: 8px; 
+} 
+ 
+.balance-display span:last-child {   font-size: 30px;   font-weight: bold;   background: linear-gradient(135deg, #667eea, #764ba2); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+} 
+ 
+.balance-input {   display: flex;   gap: 10px;   flex-wrap: wrap; 
+} 
+ 
+.input-with-icon {  position: relative;  flex: 1; 
+  min-width: 120px; 
+} 
+ 
+.input-with-icon i {   position: absolute;   left: 12px;   top: 50%;   transform: translateY(-50%);   color: #999;   font-size: 14px; 
+} 
+ 
+.input-with-icon input {   width: 100%;   padding: 10px 15px 10px 35px;   border: 2px solid #e0e5ec;   border-radius: 12px;   font-size: 14px;   outline: none;   transition: 0.3s;   background: #f8f9fa; 
+} 
+ 
+.input-with-icon input:focus {   border-color: #667eea;   background: white;   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); 
+} 
+ 
+.balance-input button { padding: 10px 20px; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: 0.3s;   display: flex;   align-items: center;   gap: 6px; 
+} 
+ 
+.balance-input button:first-of-type {   background: linear-gradient(135deg, #667eea, #764ba2); 
+  color: white; 
+} 
+ 
+.balance-input button:first-of-type:hover {   transform: translateY(-2px);   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); 
+} 
+ 
+.balance-input button:last-of-type {   background: #e74c3c; 
+  color: white; 
+} 
+ 
+.balance-input button:last-of-type:hover {   transform: translateY(-2px);   box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); 
+} 
+ 
+/* Expense Section */ 
+.expense-section {   background: white;   border-radius: 18px;   padding: 20px;   margin-bottom: 20px;   box-shadow: 0 2px 10px rgba(0,0,0,0.05);   border: 1px solid #eef2f7; 
+} 
+ 
+.input-group { 
+  display: flex;   gap: 10px;   margin-bottom: 12px;   flex-wrap: wrap; 
+} 
+ 
+.input-group .input-with-icon { 
+  flex: 1; 
+  min-width: 150px; 
+} 
+ 
+.expense-actions { 
+  display: flex;   gap: 10px;   flex-wrap: wrap; 
+} 
+ 
+.expense-actions button { 
+  flex: 1; 
+min-width: 120px; padding: 12px 20px; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: 0.3s;   display: flex;   align-items: center;   justify-content: center;   gap: 8px; 
+} 
+ 
+.expense-actions button:first-of-type {   background: linear-gradient(135deg, #2ecc71, #27ae60); 
+  color: white; 
+} 
+ 
+.expense-actions button:first-of-type:hover {   transform: translateY(-2px);   box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4); 
+} 
+ 
+.expense-actions button:last-of-type {   background: #f39c12;   color: white; 
+} 
+ 
+.expense-actions button:last-of-type:hover {   transform: translateY(-2px);   box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); 
+} 
+ 
+/* Transactions */ .transactions {   background: white;   border-radius: 18px;   padding: 20px;   box-shadow: 0 2px 10px rgba(0,0,0,0.05);   border: 1px solid #eef2f7; 
+} 
+ 
+.tx-header { 
+  display: flex;   justify-content: space-between;   align-items: center;   margin-bottom: 15px;   padding-bottom: 10px;   border-bottom: 2px solid #f0f2f5; 
+} 
+ 
+.tx-header h3 {   font-size: 18px;   color: #2c3e50; 
+} 
+ 
+.tx-header h3 i {   color: #667eea;   margin-right: 8px; 
+} 
+ 
+.tx-stats { display: flex; align-items: center; gap: 6px; background: #f0f2f5; padding: 5px 15px; border-radius: 20px; font-size: 14px;   color: #555; 
+} 
+ 
+.tx-stats i {   color: #667eea; 
+} 
+ 
+#txList {   list-style: none;   max-height: 300px;   overflow-y: auto; 
+} 
+ 
+#txList li { 
+  background: #f8f9fa;   padding: 12px 15px;   border-radius: 12px;   margin-bottom: 8px; 
+  display: flex; 
+  justify-content: space-between;   align-items: center;   border-left: 4px solid #667eea;   transition: 0.3s; 
+} 
+ 
+#txList li:hover { 
+transform: translateX(5px); background: #f0f2f5; 
+}
+ 
+#txList .tx-desc {   font-weight: 500;   color: #2c3e50; 
+  display: flex;   align-items: center;   gap: 10px; 
+} 
+ 
+#txList .tx-desc i {   color: #667eea;   font-size: 14px; 
+} 
+ 
+#txList .tx-amount {   font-weight: bold;   color: #e74c3c;   background: #fde8e8;   padding: 4px 12px;   border-radius: 20px;   font-size: 14px; 
+} 
+ 
+#txList .tx-delete { 
+  background: none;   border: none; color: #bbb; cursor: pointer; font-size: 18px; padding: 0 5px; transition: 0.3s; 
+}
+ 
+#txList .tx-delete:hover {   color: #e74c3c;   transform: scale(1.2); 
+} 
+ 
+#txList .empty-item {   text-align: center;   color: #999;   padding: 30px;   border-left: none;   background: #fafafa; 
+} 
+ 
+#txList .empty-item i {   display: block;   font-size: 40px;   color: #ddd;   margin-bottom: 10px; 
+} 
+ 
+/* Scrollbar */ #txList::-webkit-scrollbar {   width: 5px; 
+} 
+ 
+#txList::-webkit-scrollbar-track { background: #f0f2f5; border-radius: 10px; 
+}
+ 
+#txList::-webkit-scrollbar-thumb {   background: #c5cdd8;   border-radius: 10px; 
+} 
+ 
+#txList::-webkit-scrollbar-thumb:hover {   background: #a8b4c4; 
+} 
+ 
+/* Responsive */ 
+@media (max-width: 550px) { 
+  .container {     padding: 20px; 
+  } 
+   
+  .chart-section {     flex-direction: column;     gap: 20px;     padding: 20px; 
+  } 
+   
+  .pie-chart {     width: 120px;     height: 120px; 
+  } 
+ 
+.pie-center { 
+  width: 70px;   height: 70px; 
+} 
+  
+  .pie-center span {     font-size: 18px; 
+  } 
+   
+  .balance-input {     flex-direction: column; 
+  } 
+   
+  .input-group {     flex-direction: column; 
+  } 
+   
+  .input-with-icon {     min-width: unset; 
+  } 
+   
+  .expense-actions {     flex-direction: column; 
+  } 
+   
+  .expense-actions button {     min-width: unset; 
+  } 
+} 
+ 
+>>>>>>> a66ee38 (Updated expense management project with verified fixes)

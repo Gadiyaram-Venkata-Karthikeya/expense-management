@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
+<<<<<<< HEAD
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Expense Management System</title> 
@@ -140,7 +141,99 @@
                 </div> 
             </div> 
         </div> 
+=======
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Expense Manager</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.4.0/css/all.min.css" /> 
+  <link rel="stylesheet" href="Expensemanager.css" /> 
+</head> 
+<body> 
+ 
+<div class="container"> 
+  <!-- Header --> 
+  <div class="header"> 
+    <h1><i class="fas fa-wallet"></i> Expense Manager</h1> 
+    <p class="subtitle"><i class="fas fa-chart-pie"></i> Track your spending</p> 
+  </div> 
+   
+  <!-- Pie Chart Section --> 
+  <div class="chart-section"> 
+    <div class="pie-chart" id="pieChart"> 
+      <div class="pie-segment" id="pieSegment"></div> 
+      <div class="pie-center"> 
+        <i class="fas fa-percent"></i> 
+        <span id="percentageText">0%</span> 
+        <small>Spent</small> 
+      </div> 
     </div> 
-    <script src="App.js"></script> 
+    <div class="chart-info"> 
+      <div class="legend"> 
+    <span class="legend-color" style="background: #2ecc71;"></span> 
+        <span><i class="fas fa-check-circle" style="color: #2ecc71;"></i> Less than 50%</span> 
+      </div> 
+      <div class="legend"> 
+        <span class="legend-color" style="background: #f39c12;"></span> 
+        <span><i class="fas fa-equals" style="color: #f39c12;"></i> Exactly 50%</span>       </div> 
+      <div class="legend"> 
+        <span class="legend-color" style="background: #e74c3c;"></span> 
+        <span><i class="fas fa-exclamation-triangle" style="color: #e74c3c;"></i> More than 50%</span> 
+      </div> 
+      <div class="legend-detail"> 
+        <i class="fas fa-info-circle"></i> 
+        <span id="statusText">Set your balance to start</span> 
+      </div> 
+>>>>>>> a66ee38 (Updated expense management project with verified fixes)
+    </div> 
+  </div> 
+ 
+  <!-- Set Balance --> 
+  <div class="balance-section"> 
+    <div class="balance-display"> 
+      <span><i class="fas fa-coins"></i> Total Balance</span> 
+      <span id="totalBalance">₹ 0</span> 
+    </div> 
+    <div class="balance-input"> 
+      <div class="input-with-icon"> 
+        <i class="fas fa-rupee-sign"></i> 
+        <input type="number" id="setBalanceInput" placeholder="Set balance" /> 
+      </div> 
+      <button id="setBalanceBtn"><i class="fas fa-check"></i> Set</button> 
+  <button id="resetBtn"><i class="fas fa-undo"></i> Reset</button> 
+    </div> 
+  </div> 
+ 
+  <!-- Add Expense --> 
+  <div class="expense-section"> 
+    <div class="input-group"> 
+      <div class="input-with-icon"> 
+        <i class="fas fa-pen"></i> 
+        <input type="text" id="descInput" placeholder="Description" /> 
+      </div> 
+      <div class="input-with-icon"> 
+        <i class="fas fa-rupee-sign"></i> 
+        <input type="number" id="amountInput" placeholder="Amount" /> 
+      </div> 
+    </div> 
+    <div class="expense-actions"> 
+      <button id="addBtn"><i class="fas fa-plus-circle"></i> Add Expense</button> 
+      <button id="clearBtn"><i class="fas fa-trash-alt"></i> Clear All</button> 
+    </div> 
+  </div> 
+ 
+  <!-- Transactions --> 
+  <div class="transactions"> 
+    <div class="tx-header"> 
+      <h3><i class="fas fa-list-ul"></i> Transactions</h3> 
+      <div class="tx-stats"> 
+        <i class="fas fa-hashtag"></i> 
+        <span id="txCount">0</span> 
+      </div> 
+    </div> 
+<ul id="txList"></ul> 
+  </div> 
+</div> 
+ 
+<script src="Expensemanager.js"></script> 
 </body> 
 </html>
